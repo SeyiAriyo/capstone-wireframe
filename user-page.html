@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>Recipe Creator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <nav role="navigation">
+        <ul>
+        <li> <a href = "create-recipe.html">Create Recipe</a></li>
+        <li><a href = "recipeList.html">Recipe List</a> </li>
+        <li><a href = "user-page.html">User Page</a></li>
+        <li><a href = "admin-page.html">Admin Page</a></li>
+        
+      </ul>
+    </nav>
+    <main role="main">
+      <header>
+        <h1></h1>
+      </header>
+      <section>
+        <form id="record-recipe">
+          <div class="form-section">
+            <label for="recipe-title">Recipe title</label>
+            <input type="text" name="recipe-title" placeholder="Recipe" required>
+          </div>
+          <div class="form-section">
+            <label for="recipe-summary">Recipie summary</label>
+            <textarea name="recipe-summary" rows="15"   required></textarea>
+          </div>
+          <div class="recipie-time-container" class="form-section">
+            <label for="recipie-time"> </label>
+            <input type="number" name="recipie-time" placeholder="8">
+          </div>
+          <div class="form-section">
+            <p>Select recipe type</p>
+
+            <input type="radio" name="recipe-type" value="0" class="recipe-type-radio" checked>
+            <label for="recipe-type">
+              <span>Normal</span>
+              <div class="recipe-type-explanation"></div>
+            </label>
+
+            <input type="radio" name="recipe-type" value="1" class="recipe-type-radio">
+            <label for="recipe-type">
+              <span>Vegan</span>
+              <div class="recipe-type-explanation"></div>
+            </label>
+
+            <input type="radio" name="recipe-type" value="2" class="recipe-type-radio">
+            <label for="recipe-type">
+              <span>Vegitarian</span>
+              <div class="recipe-type-explanation"></div>
+            </label>
+
+            <input type="radio" name="recipe-type" value="3" class="recipe-type-radio">
+            <label for="recipe-type">
+              <span>Recurring</span>
+              <div class="recipe-type-explanation"></div>
+            </label>
+
+            <input type="radio" name="recipe-type" value="4" class="recipe-type-radio">
+            <label for="recipe-type">
+              <span>Gluten Free</span>
+              <div class="recipe-type-explanation"></div>
+            </label>
+          </div>
+
+          <div class="form-section">
+            <p class="recipe-date-header">Date of recipe</p>
+            <input type="number" name="date-month" placeholder="01" min="1" max="12" required=""> .
+            <input type="number" name="date-day" class="date-day"  placeholder="01" min="1" max="31" required=""> .
+            <input type="number" name="date-year" class="date-year" placeholder="2017" min="2016" max="2017" required="">
+          </div>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+    </main>
+  </body>
+
+</html>
